@@ -7,7 +7,7 @@ export async function GET() {
   return rss({
     title: "Sample Tech Blog",
     description: "Insights on web, mobile & software development",
-    site: "https://yourdomain.com",
+    site: "https://sampleastro.netlify.app",
     items: posts.map(post => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
