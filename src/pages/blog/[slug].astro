@@ -19,7 +19,10 @@ const { Content } = await post.render();
   title={post.data.title}
   description={post.data.description}
 >
-  <article class="prose max-w-3xl">
+
+  <article class="prose max-w-3xl
+    prose-gray dark:prose-invert
+    ">
     <h1>{post.data.title}</h1>
     <Content />
   </article>

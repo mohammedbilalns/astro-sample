@@ -2,7 +2,10 @@
 const { project } = Astro.props;
 ---
 
-<article class="border rounded-2xl overflow-hidden hover:shadow-lg transition bg-white">
+
+<article class="border dark:border-gray-800 rounded-2xl overflow-hidden
+  bg-white dark:bg-gray-900
+  hover:shadow-lg transition">
   <img
     src={project.image}
     alt={project.title}
@@ -21,9 +24,9 @@ const { project } = Astro.props;
 
     <div class="flex flex-wrap gap-2">
       {project.tech.map((t: string) => (
-        <span class="text-xs bg-gray-100 px-2 py-1 rounded">
-          {t}
-        </span>
+      <span class="text-xs bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-2 py-1 rounded">
+        {t}
+      </span>
       ))}
     </div>
 
