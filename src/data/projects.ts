@@ -5,7 +5,7 @@ export const projects = [
       "A scalable e-commerce web app with admin dashboard and payment integration.",
     image: "/projects/significa.png",
     tech: ["React", "Node.js", "PostgreSQL"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://mohammedbilalns.github.io/Significa-Clone",
   },
   {
     title: "SaaS Analytics Dashboard",
@@ -13,7 +13,7 @@ export const projects = [
       "Real-time analytics dashboard for monitoring business KPIs.",
     image: "/projects/significa.png",
     tech: ["Next.js", "Tailwind", "API"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://mohammedbilalns.github.io/Significa-Clone",
   },
   {
     title: "Company Website",
@@ -21,6 +21,6 @@ export const projects = [
       "SEO-optimized marketing website for a tech startup.",
     image: "/projects/significa.png",
     tech: ["Astro", "Tailwind"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://mohammedbilalns.github.io/Significa-Clone"
   },
 ];
