@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact – SampleTech"
+  description="Get in touch to discuss your web or mobile software project."
+>
+  <section class="max-w-2xl">
+    <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
+
+    <form
+      method="POST"
+      class="space-y-6"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        class="w-full border px-4 py-3 rounded-lg"
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        class="w-full border px-4 py-3 rounded-lg"
+      />
+
+      <textarea
+        name="message"
+        placeholder="Tell us about your project"
+        rows="5"
+        class="w-full border px-4 py-3 rounded-lg"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+      >
+        Send Message
+      </button>
+    </form>
+  </section>
+</BaseLayout>
