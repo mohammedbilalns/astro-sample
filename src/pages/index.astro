@@ -1,16 +1,24 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="YourCompany – Web & Mobile Development"
+  description="We build scalable web and mobile applications for modern businesses."
+>
+  <section class="text-center space-y-6">
+    <h1 class="text-4xl font-bold">
+      We Build Modern Software Solutions <span class="text-blue-100" >Hi </span>  
+    </h1>
+    <p class="text-lg text-gray-600 ">
+      Web • Mobile • Backend • Cloud
+    </p>
+
+    <a
+      href="/contact"
+      class="inline-block bg-black text-white px-6 py-3 rounded"
+    >
+      Get a Quote
+    </a>
+  </section>
+</BaseLayout>
