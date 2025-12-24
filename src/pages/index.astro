@@ -1,24 +1,36 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
 ---
 
 <BaseLayout
-  title="YourCompany – Web & Mobile Development"
-  description="We build scalable web and mobile applications for modern businesses."
+  title="SampleTech – Web Development Company"
+  description="We build high-quality web applications for modern businesses."
 >
-  <section class="text-center space-y-6">
-    <h1 class="text-4xl font-bold">
-      We Build Modern Software Solutions <span class="text-blue-100" >Hi </span>  
+  <!-- Hero -->
+  <section class="text-center mb-24">
+    <h1 class="text-4xl font-bold mb-4">
+      We Build High-Quality Web Applications
     </h1>
-    <p class="text-lg text-gray-600 ">
-      Web • Mobile • Backend • Cloud
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      Custom web solutions focused on performance, scalability, and clean design.
     </p>
+  </section>
 
-    <a
-      href="/contact"
-      class="inline-block bg-black text-white px-6 py-3 rounded"
-    >
-      Get a Quote
-    </a>
+  <!-- Projects -->
+  <section class="mb-24">
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="text-3xl font-bold">Our Projects</h2>
+      <a href="/contact" class="text-blue-600 font-medium hover:underline">
+        Start a Project →
+      </a>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map(project => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
   </section>
 </BaseLayout>
