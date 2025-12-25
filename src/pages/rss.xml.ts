@@ -5,9 +5,9 @@ export async function GET() {
   const posts = await getCollection("blog");
 
   return rss({
-    title: "Sample Tech Blog",
+    title: "AevonSolutions Blog",
     description: "Insights on web, mobile & software development",
-    site: "https://sampleastro.netlify.app",
+    site: "https://aevonsolutions.netlify.app",
     items: posts.map(post => ({
       title: post.data.title,
       pubDate: post.data.publishDate,
