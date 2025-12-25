@@ -6,21 +6,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="About Us – SampleTech"
   description="We are a software development company focused on quality and scalability."
 >
-  <section class="max-w-3xl">
-    <h1 class="text-4xl font-bold mb-6">About Us</h1>
-
-    <p class="text-gray-600 mb-4">
-      SampleTech is a software development company specializing in
-      web, mobile, and backend solutions.
+  <section class="max-w-4xl mx-auto px-4">
+    <h1 class="text-3xl font-bold mb-4 text-center">About Us</h1>
+    <p class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto text-center mb-12">
+      We are a software development company focused on quality and scalability.
     </p>
 
-    <p class="text-gray-600 mb-4">
-      We help startups and businesses build reliable, scalable,
-      and maintainable software using modern technologies.
-    </p>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/50 rounded-lg p-6 text-center">
+        <h2 class="text-xl font-bold mb-2">Our Mission</h2>
+        <p class="text-gray-700 dark:text-gray-300">
+          SampleTech is a software development company specializing in
+          web, mobile, and backend solutions.
+        </p>
+      </div>
 
-    <p class="text-gray-600">
-      Our focus is clean architecture, performance, and long-term value.
-    </p>
+      <div class="bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/50 rounded-lg p-6 text-center">
+        <h2 class="text-xl font-bold mb-2">Our Approach</h2>
+        <p class="text-gray-700 dark:text-gray-300">
+          We help startups and businesses build reliable, scalable,
+          and maintainable software using modern technologies.
+        </p>
+      </div>
+
+      <div class="bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/50 rounded-lg p-6 text-center">
+        <h2 class="text-xl font-bold mb-2">Our Values</h2>
+        <p class="text-gray-700 dark:text-gray-300">
+          Our focus is clean architecture, performance, and long-term value.
+        </p>
+      </div>
+    </div>
   </section>
 </BaseLayout>
