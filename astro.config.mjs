@@ -6,7 +6,7 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  site:"https://sampleastro.netlify.app",
+  site:"https://aevonsolutions.com",
   vite: {
     plugins: [tailwindcss()]
   },
