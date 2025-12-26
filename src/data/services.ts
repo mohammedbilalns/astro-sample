@@ -1,17 +1,17 @@
 export const services = [
   {
-    title: "Web Development",
-    description: "We build modern, fast, and responsive websites using the latest technologies.",
+    title: "Custom Web Applications",
+    description: "Tailored web apps built for performance and scalability. We turn complex requirements into seamless digital experiences.",
     icon: "💻"
   },
   {
-    title: "Mobile Development",
-    description: "We create beautiful and performant mobile apps for iOS and Android.",
-    icon: "📱"
+    title: "E-Commerce Platforms",
+    description: "Robust online stores designed to convert. Secure payment integration, inventory management, and intuitive user journeys.",
+    icon: "🛍️"
   },
   {
-    title: "UI/UX Design",
-    description: "We design intuitive and engaging user interfaces that your users will love.",
-    icon: "🎨"
+    title: "Static Websites & CMS",
+    description: "Blazing fast static sites and flexible Content Management Systems. Perfect for portfolios, blogs, and marketing sites.",
+    icon: "📄"
   }
-]
+];

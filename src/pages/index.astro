@@ -4,53 +4,168 @@ import ProjectCard from "../components/ProjectCard.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import { projects } from "../data/projects";
 import { services } from "../data/services";
+import { testimonials } from "../data/testimonials";
 ---
 
-<BaseLayout
-  title="AevonSolutions – Web Development Company"
-  description="We build high-quality web applications for modern businesses."
->
-  <!-- Hero -->
-  <section id="hero" class="text-center mb-24 opacity-0">
-    <h1 class="text-4xl font-bold mb-4">
-      We Build High-Quality Web Applications
-    </h1>
-    <p class="text-gray-600 max-w-2xl mx-auto">
-      Custom web solutions focused on performance, scalability, and clean design.
-    </p>
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <div class="px-6 mx-auto max-w-7xl text-center">
+      <h1 class="animate-on-scroll text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl lg:text-7xl mb-6">
+        Timeless Innovations for a <span class="text-blue-600 dark:text-blue-400">Digital Future</span>
+      </h1>
+      <p class="animate-on-scroll delay-100 mt-4 text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10">
+        We build software that endures. High-performance, scalable, and future-proof solutions designed to elevate your business.
+      </p>
+      <div class="animate-on-scroll delay-200 flex justify-center gap-4">
+        <a href="#contact" class="px-8 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors shadow-lg shadow-blue-500/30">
+          Contact Us
+        </a>
+        <a href="#projects" class="px-8 py-3 text-base font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">
+          View Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction / About -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <div class="px-6 mx-auto max-w-4xl text-center">
+      <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Who We Are</span>
+      <h2 class="animate-on-scroll mt-2 text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-6">
+        Architecting the Future
+      </h2>
+      <p class="animate-on-scroll delay-100 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        At <span class="font-bold text-slate-900 dark:text-white">AevonSolutions</span>, we believe that true innovation isn't just about the latest trend—it's about building systems that stand the test of time. Our team of expert engineers and strategists combines cutting-edge technology with timeless design principles to deliver robust, scalable, and impactful digital products.
+      </p>
+    </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="mb-24 opacity-0">
-    <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {services.map(service => (
-        <ServiceCard service={service} />
-      ))}
+  <section id="services" class="py-24">
+    <div class="px-6 mx-auto max-w-7xl">
+      <div class="text-center mb-16">
+         <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">What We Do</span>
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mt-2">
+          Comprehensive Solutions
+        </h2>
+      </div>
+      
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, index) => (
+          <div class="animate-on-scroll" style={`animation-delay: ${index * 100}ms`}>
+            <ServiceCard service={service} />
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="mb-24 opacity-0">
-    <div class="flex justify-between items-center mb-10">
-      <h2 class="text-3xl font-bold">Our Projects</h2>
-      <a href="/contact" class="text-primary font-medium hover:underline">
-        Start a Project →
-      </a>
-    </div>
+  <section id="projects" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <div class="px-6 mx-auto max-w-7xl">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div>
+          <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Our Work</span>
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mt-2">Selected Projects</h2>
+        </div>
+        <a href="/contact" class="hidden md:inline-flex items-center font-medium text-blue-600 hover:text-blue-500 transition-colors mt-4 md:mt-0">
+          Start a Project <span class="ml-2">→</span>
+        </a>
+      </div>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map(project => (
-        <ProjectCard project={project} />
-      ))}
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
+          <div class="animate-on-scroll" style={`animation-delay: ${index * 100}ms`}>
+            <ProjectCard project={project} />
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-12 text-center md:hidden">
+         <a href="/contact" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-500 transition-colors">
+          Start a Project <span class="ml-2">→</span>
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-24">
+    <div class="px-6 mx-auto max-w-7xl">
+       <div class="text-center mb-16">
+         <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Testimonials</span>
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mt-2">
+          Trusted by Industry Leaders
+        </h2>
+      </div>
+      
+      <div class="grid gap-8 md:grid-cols-3">
+        {testimonials.map((t, index) => (
+           <div class="animate-on-scroll p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700" style={`animation-delay: ${index * 100}ms`}>
+              <div class="flex items-center mb-6">
+                  <!-- Avatar placeholder for now, or use SVGs -->
+                  <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-xl">
+                    {t.author.charAt(0)}
+                  </div>
+                  <div class="ml-4">
+                    <div class="font-semibold text-slate-900 dark:text-white">{t.author}</div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400">{t.role}</div>
+                  </div>
+              </div>
+              <p class="text-slate-600 dark:text-slate-300 italic">"{t.quote}"</p>
+           </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="py-24 bg-blue-600 dark:bg-blue-700">
+     <div class="px-6 mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl mb-6">
+          Ready to Future-Proof Your Business?
+        </h2>
+        <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
+          Let's discuss how AevonSolutions can help you build the technology of tomorrow, today.
+        </p>
+        <a href="/contact" class="inline-block px-8 py-4 text-lg font-bold text-blue-600 bg-white rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
+          Schedule a Consultation
+        </a>
+     </div>
+  </section>
+
 </BaseLayout>
 
 <script>
-  import { animate } from "motion";
+  // Simple Intersection Observer for scroll animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
 
-  animate("#hero", { opacity: 1, y: [50, 0] }, { duration: 0.5 });
-  animate("#services", { opacity: 1, y: [50, 0] }, { duration: 0.5, delay: 0.2 });
-  animate("#projects", { opacity: 1, y: [50, 0] }, { duration: 0.5, delay: 0.4 });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in'); // You could add a class to trigger if not using CSS animation directly on load
+        // Actually, our CSS has animation defined on class. 
+        // We want to trigger it when visible. 
+        // Approach: standard is adding a class.
+        // Let's refine:
+        // By default elements have opacity 0.
+        // When in view, add 'is-visible' class which sets animation.
+        (entry.target as HTMLElement).style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => {
+      (el as HTMLElement).style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
 </script>

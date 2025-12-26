@@ -1,26 +1,34 @@
 export const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "LuxeThreads Fashion",
     description:
-      "A scalable e-commerce web app with admin dashboard and payment integration.",
-    image: "/projects/significa.png",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    liveUrl: "https://mohammedbilalns.github.io/Significa-Clone",
+      "A premium fashion e-commerce platform featuring real-time inventory, AI-driven recommendations, and seamless checkout.",
+    image: "/projects/significa.png", // Generic placeholder
+    tech: ["Next.js", "Stripe", "Sanity CMS"],
+    liveUrl: "#",
   },
   {
-    title: "SaaS Analytics Dashboard",
+    title: "TechGear Pro Store",
     description:
-      "Real-time analytics dashboard for monitoring business KPIs.",
+      "High-performance electronics retailer site capable of handling high traffic spikes during product launches.",
     image: "/projects/significa.png",
-    tech: ["Next.js", "Tailwind", "API"],
-    liveUrl: "https://mohammedbilalns.github.io/Significa-Clone",
+    tech: ["Shopify Headless", "React", "Redis"],
+    liveUrl: "#",
   },
   {
-    title: "Company Website",
+    title: "Horizon Realty",
     description:
-      "SEO-optimized marketing website for a tech startup.",
+      "A modern real estate listing platform with map integration, advanced filtering, and virtual tour capabilities.",
     image: "/projects/significa.png",
-    tech: ["Astro", "Tailwind"],
-    liveUrl: "https://mohammedbilalns.github.io/Significa-Clone"
+    tech: ["Astro", "Tailwind", "Leaflet"],
+    liveUrl: "#"
   },
+  {
+    title: "TaskFlow Dashboard",
+    description:
+      "A collaborative project management tool for remote teams, featuring real-time updates and intuitive drag-and-drop interfaces.",
+    image: "/projects/significa.png",
+    tech: ["React", "Firebase", "TypeScript"],
+    liveUrl: "#"
+  }
 ];

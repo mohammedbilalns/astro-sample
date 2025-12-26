@@ -4,7 +4,11 @@ import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
 import "../styles/global.css"
 
-const { title, description, canonical } = Astro.props;
+const { 
+  title = "AevonSolutions – Timeless Innovations", 
+  description = "AevonSolutions delivers timeless, future-proof software solutions for modern businesses.",
+  canonical 
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -13,12 +17,35 @@ const { title, description, canonical } = Astro.props;
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <SEO title={title} description={description} canonical={canonical} />
+  <style is:global>
+    /* Critical CSS for animations to replace motion */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-on-scroll {
+      opacity: 0; /* HIDDEN BY DEFAULT */
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    /* Stagger delays */
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+  </style>
 </head>
 
-<body class="min-h-screen flex flex-col bg-white text-gray-900 dark:bg-gray-950 dark:text-white antialiased overflow-y-scroll">
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased overflow-y-scroll selection:bg-blue-600 selection:text-white">
   <Navbar />
 
-  <main class="flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
+  <main class="flex-1 w-full">
     <slot />
   </main>
 
